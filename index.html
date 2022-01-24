@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #obj{
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+            border:none;
+            position: absolute;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" id="obj"></button>
+    
+    <script>
+        var counter=0, xpos, ypos, obj;
+        obj=document.querySelector("#obj");
+        obj.onmouseover=function(){
+            counter++;
+            xpos=parseInt(Math.random()*1000);
+            ypos=parseInt(Math.random()*600);
+            obj.style.left=xpos+"px";
+            obj.style.top=ypos+"px";
+        }
+        obj.onclick= function(){
+            alert("tebrikler " + counter +  " . seferde bildiniz!");
+        }
+
+    </script>
+</body>
+</html>
